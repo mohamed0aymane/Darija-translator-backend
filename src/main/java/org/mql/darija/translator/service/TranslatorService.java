@@ -59,7 +59,13 @@ public class TranslatorService {
                 .get(0)
                 .get("text");
 
-        return textNode.asText();
+        String cleanText = textNode.asText()
+        .replace("\n", "")   
+        .replace("\r", "")   
+        .trim();  
+
+        return cleanText;
+
 
     } catch (Exception e) {
         return "Error: " + e.getMessage();

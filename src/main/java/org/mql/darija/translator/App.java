@@ -15,7 +15,12 @@ public class App {
         // 1) Configuration Jersey
         ResourceConfig config = new ResourceConfig();
         config.packages("org.mql.darija.translator");
+
+        // Register JSON mapper
         config.register(JacksonFeature.class);
+
+        // Register CORS filter manually (IMPORTANT)
+        config.register(org.mql.darija.translator.config.CORSFilter.class);
 
         // 2) Jetty server
         Server server = new Server(8080);
@@ -24,7 +29,7 @@ public class App {
         ServletHolder servlet = new ServletHolder(new ServletContainer(config));
         context.addServlet(servlet, "/*");
 
-        // 3) Start server
+        // Start
         server.start();
         System.out.println("Backend running at: http://localhost:8080/");
         server.join();

@@ -1,7 +1,6 @@
-org\mql\darija\translator\controller\TranslatorController$JsonInput.class
 org\mql\darija\translator\controller\TranslatorController.class
-org\mql\darija\translator\service\TranslatorService.class
 org\mql\darija\translator\config\CORSFilter.class
 org\mql\darija\translator\model\TranslateRequest.class
+org\mql\darija\translator\service\TranslatorService.class
 org\mql\darija\translator\App.class
 org\mql\darija\translator\model\TranslateResponse.class
