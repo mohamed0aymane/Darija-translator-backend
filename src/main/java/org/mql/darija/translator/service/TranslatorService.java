@@ -9,7 +9,7 @@ import java.time.Duration;
 
 public class TranslatorService {
 
-    private static final String GEMINI_API_KEY = "AIzaSyBQPAjIkr6QyT9hDwbny8_ELZr-zga4bK0";
+    private static final String GEMINI_API_KEY = "AIzaSyDpvKb_Ot39FvpdaD2u139icQH6AT_j-Mk";
 
     private static final HttpClient http = HttpClient.newBuilder()
             .connectTimeout(Duration.ofSeconds(10))

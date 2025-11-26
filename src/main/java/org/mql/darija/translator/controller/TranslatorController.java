@@ -17,7 +17,7 @@ public class TranslatorController {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response translate(TranslateRequest request) {
-        String result = service.translate(request.text);
+        String result = service.translate(request.getText());
         return Response.ok(new TranslateResponse(result)).build();
     }
 }
